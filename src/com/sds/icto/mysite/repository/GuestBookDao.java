@@ -15,9 +15,6 @@ import org.springframework.stereotype.Repository;
 import com.sds.icto.mysite.domain.GuestBookVo;
 import com.sds.icto.mysite.exception.GuestbookDaoException;
 
-
-
-
 @Repository
 public class GuestBookDao {
 	private Connection getConnection() throws ClassNotFoundException,

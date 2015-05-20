@@ -16,7 +16,7 @@
 		</div>
 		<div id="content">
 			<div id="board">
-				<form class="board-form" method="post" action="/mysite3/bd">
+				<form class="board-form" method="post" action="/mysite3/board">
 					<input type = "hidden" name = "a" value="write">
 					<input type="hidden" name = "membername" value="${authMember.name }">
 					<input type="hidden" name = "memberno" value="${authMember.no }">

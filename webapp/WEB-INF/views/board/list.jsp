@@ -41,7 +41,7 @@
 						<td>${vo.date }</td>
 						<td>
 						<c:if test="${authMember.no==vo.memberno}">
-							<a href="views/board/deleteform.jsp?no=${vo.no }" class="del">삭제</a>
+							<a href="/mysite3/board/delete/${vo.no }" class="del">삭제</a>
 						</c:if>
 						</td>
 					</tr>
@@ -49,7 +49,7 @@
 				</table>
 				<div class="bottom">
 				<c:if test="${authMember.no!=null}">
-					<a href="views/board/write.jsp" id="new-book">글쓰기</a>
+					<a href="/mysite3/board/write/" id="new-book">글쓰기</a>
 				</c:if>
 				</div>				
 			</div>

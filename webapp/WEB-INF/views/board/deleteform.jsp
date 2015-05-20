@@ -15,15 +15,14 @@
 		</div>
 		<div id="content">
 			<div id="guestbook" class="delete-form">
-				<form method="post" action="/mysite3/bd">
-					<input type="hidden" name="a" value="delete">
-					<input type="hidden" name="no" value="${param.no}">
+				<form method="post" action="/mysite3/board/delete">
+					<input type="hidden" name="no" value="${no}">
 					<input type="hidden" name="memberno" value="${authMember.no }">
 					<label>정말로 삭제하시겠습니까?    </label>
 					
 					<input type="submit" value="YES">
 				</form>
-				<a href="/mysite3/bd?a=list">게시판 리스트</a>
+				<a href="/mysite3/board">게시판 리스트</a>
 			</div>
 		</div>
 		<div id="navigation">
