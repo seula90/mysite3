@@ -24,14 +24,14 @@ public class GuestbookController {
 	@Autowired
 	GuestbookService guestbookService;
 	
-	@RequestMapping(value={"","/","/list"}, method=RequestMethod.GET)
+	@RequestMapping(value={"","/index","/list"}, method=RequestMethod.GET)
 	public String list(Model model){
 		List<GuestBookVo> list = guestbookService.list();
 		model.addAttribute("list",list);
-		return "guestbook/list";
+		return "/guestbook/list";
 	}
 	
-	@RequestMapping(value={"","/"}, method=RequestMethod.POST)
+	@RequestMapping(value={"","/","/insert"}, method=RequestMethod.POST)
 	public String insert(@ModelAttribute GuestBookVo vo){
 		guestbookService.guestbookInsert(vo);
 		return "redirect:/guestbook";
@@ -40,7 +40,7 @@ public class GuestbookController {
 	@RequestMapping(value={"/delete/{no}"}, method=RequestMethod.GET)
 	public String deleteForm(@PathVariable Long no, Model model){
 		model.addAttribute("no",no);
-		return "guestbook/deleteform";
+		return "/guestbook/deleteform";
 	}
 	
 	@RequestMapping(value={"/delete"}, method=RequestMethod.POST)
@@ -49,7 +49,6 @@ public class GuestbookController {
 		return "redirect:/guestbook";
 	}
 	
-	
-	
+		
 
 }

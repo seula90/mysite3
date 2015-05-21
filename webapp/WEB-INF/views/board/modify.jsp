@@ -16,7 +16,8 @@
 		</div>
 		<div id="content">
 			<div id="board">
-				<form class="board-form" method="post" action="/mysite3/bd?a=update&no=${vo.no }">
+				<form class="board-form" method="post" action="/mysite3/board/modify">
+				<input type="hidden" name="no" value="${vo.no }">
 				<input type="hidden" name="memberno" value="${authMember.no }">
 					<table class="tbl-ex">
 						<tr>
@@ -35,7 +36,7 @@
 						</tr>
 					</table>
 					<div class="bottom">
-						<a href="/mysite3/bd?a=view&no=${vo.no }">취소</a>
+						<a href="/mysite3/view/${vo.no }">취소</a>
 						<input type="submit" value="수정">
 					</div>
 				</form>				

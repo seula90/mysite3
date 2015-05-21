@@ -18,7 +18,7 @@
 		</div>
 		<div id="content">
 			<div id="board">
-				<form id="search_form" action="/mysite3/bd?a=find" method="post">
+				<form id="search_form" action="/mysite3/board/find" method="post">
 					<input type="text" id="kwd" name="kwd" value="">
 					<input type="submit" value="찾기">
 				</form>
@@ -35,7 +35,7 @@
 					<c:forEach items="${list }" var="vo">		
 					<tr>
 						<td>${vo.no}</td>
-						<td><a href="/mysite3/bd?a=view&no=${vo.no }">${vo.title }</a></td>
+						<td><a href="/mysite3/board/view/${vo.no }">${vo.title }</a></td>
 						<td>${vo.membername }</td>
 						<td>${vo.viewcnt}</td>
 						<td>${vo.date }</td>

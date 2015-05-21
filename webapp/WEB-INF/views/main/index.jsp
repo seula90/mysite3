@@ -24,7 +24,7 @@
 						메뉴는  사이트 소개, 방명록, 게시판입니당<br>
 						프로그래밍의 세계는 어려웡ㅠㅠ<br>
 						내일은 주말 야호!<br><br>
-						<a href="/mysite3/gb">방명록</a>에 글 남겨죠용<br>
+						<a href="/mysite3/guestbook">방명록</a>에 글 남겨죠용<br>
 					</p>
 				</div>
 			</div>

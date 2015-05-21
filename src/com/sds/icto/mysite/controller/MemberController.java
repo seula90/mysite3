@@ -13,7 +13,7 @@ import com.sds.icto.mysite.domain.MemberVo;
 import com.sds.icto.mysite.service.MemberService;
 
 @Controller
-@RequestMapping("/member/*")
+@RequestMapping("/member")
 public class MemberController {
 	
 	@Autowired
@@ -21,7 +21,7 @@ public class MemberController {
 
 	@RequestMapping(value="/join", method=RequestMethod.GET)
 	public String joinForm(){
-		return "member/joinform";
+		return "/member/joinform";
 	}
 	
 	@RequestMapping(value="/join", method=RequestMethod.POST)
@@ -32,7 +32,7 @@ public class MemberController {
 	
 	@RequestMapping(value="/login", method=RequestMethod.GET)
 	public String loginForm(){
-		return "member/loginform";
+		return "/member/loginform";
 	}
 	
 	@RequestMapping(value="/login", method=RequestMethod.POST)
@@ -57,6 +57,11 @@ public class MemberController {
 		session.invalidate();
 		
 		return "redirect:/index";
+	}
+	
+	@RequestMapping("/uinfo")
+	public String uinfo(HttpSession session){
+		return "/member/memberinfo";
 	}
 	
 	
