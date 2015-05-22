@@ -15,6 +15,7 @@
 		<![CDATA[
 		select *
 		  from guestbook
+		  order by no
 		]]>  
 	</select>
 	

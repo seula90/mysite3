@@ -26,12 +26,12 @@ public class BoardController {
 		return "board/list";
 	}
 	
-	@RequestMapping(value={"","/","/write"})
+	@RequestMapping(value={"/write"})
 	public String write(){
 		return "board/write";
 	}
 	
-	@RequestMapping(value={"","/"}, method=RequestMethod.POST)
+	@RequestMapping(value={"/insert"}, method=RequestMethod.POST)
 	public String insert(@ModelAttribute BoardVo vo){
 		boardService.boardInsert(vo);
 		return "redirect:/board";

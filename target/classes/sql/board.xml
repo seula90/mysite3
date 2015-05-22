@@ -32,6 +32,7 @@
 		<![CDATA[
 		select *
 		  from board where title like '%' || #kwd# || '%'
+		  order by no
 		]]>
 	</select>
 
